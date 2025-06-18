@@ -1,0 +1,122 @@
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
+background-color: #000;
+
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.hero-section, .slider-container {
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0%);
+  z-index: 2;
+}
+
+.slide.previous {
+  opacity: 0;
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.slide.next {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: 0;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75); 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+/* Info Boxes */
+
+.info-boxes {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; 
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.info-box {
+ 
+  color: white;
+  max-width: 300px;
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius:30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+    backdrop-filter: blur(8px);
+}
+.blue-box {
+  background-color: rgba(14, 165, 233, 0.1); 
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+.green-box {
+  background-color: rgba(34, 197, 94, 0.1); 
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.info-box h4 {
+  color: #22C55E;
+  font-size:1.1rem ;
+  margin-bottom: 10px;
+}
+.info-box p {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.info-box button {
+    align-self: flex-start;
+  /* margin-top: 10px; */
+  background-color: #0EA5E9;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.info-box button:hover{
+    background-color: #0284c7;
+}
