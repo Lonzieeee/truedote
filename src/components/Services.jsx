@@ -1,11 +1,11 @@
 import React from "react";
 import "./Services.css";
-import bg from "../assets/Our-Services.jpg";
+// import bg from "../assets/Our-Services.jpg";
 
 function Services() {
     return (
         <section className="services-section"
-              style={{ backgroundImage: `url(${bg})` }}
+            //   style={{ backgroundImage: `url(${bg})` }}
         >
             <div  className="services-overlay"></div>
             <h2>ONE SOLUTION, MULTIPLE APPLICATIONS</h2>

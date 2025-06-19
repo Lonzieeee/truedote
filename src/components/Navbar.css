@@ -78,6 +78,9 @@
 
 /* mobile */
 @media screen and (max-width:768px) {
+    .logo img {
+        height: 20px;
+    }
     .nav-links {
         position: absolute;
         top: 70px;

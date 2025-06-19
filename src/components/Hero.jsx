@@ -1,61 +1,72 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Hero.css";
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
-
-const images = [hero1, hero2, hero3];
+import {
+  FaHeartbeat,
+  FaMicroscope,
+  FaCapsules,
+  FaDna,
+  FaStethoscope,
+  FaSyringe,
+  FaVials,
+  FaHospital,
+  FaBrain,
+  FaNotesMedical
+} from "react-icons/fa";
 
 function Hero() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000); // display each image for 5 seconds
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="hero-section">
-      <div className="slider-container">
-        {images.map((img, index) => {
-          let className = "slide";
-          if (index === current) className += " active";
-          else if (
-            index === (current - 1 + images.length) % images.length
-          )
-            className += " previous";
-          else className += " next";
+      {/* floatin medical icons */}
+      <div className="floating-icons">
+        <FaHeartbeat className="float-icon icon1" />
+        <FaMicroscope className="float-icon icon2" />
+        <FaCapsules className="float-icon icon3" />
+        <FaDna className="float-icon icon4" />
+        <FaStethoscope className="float-icon icon5" />
+        <FaSyringe className="float-icon icon6"/>
+        <FaVials className="float-icon icon7" />
+        <FaHospital className="float-icon icon8"/>
+        <FaBrain className="float-icon icon9" />
+        <FaNotesMedical className="float-icon icon10" />
+         </div>
 
-          return (
-            <div
-              key={index}
-              className={className}
-              style={{ backgroundImage: `url(${img})` }}
-            >
-              <div className="overlay" />
-            </div>
-          );
-        })}
-      </div>
+        {/* hero contnets */}
+        <div className="hero-content">
+         <h1>Improve the quality of care in your facility today!</h1>
+         <p>We use artificial intelligence to improve disgnostics in your medical or research facilty.</p>
 
-      <div className="info-boxes">
-       <div className="info-box blue-box">
-          <h4>CLINICAL DECISION SUPPORT</h4>
-          <p>
-            Utilize decision support to deliver quality care at every stage of healthcare delivery.
-          </p>
-          <button>Order Now</button>
-        </div>
-       <div className="info-box green-box">
-          <h4>Intelligent Diagnostics</h4>
-          <p>Make decisions based on scientific evidence.</p>
-          <button>Order Now</button>
-        </div>
-      </div>
+         <div className="info-boxes">
+          <div className="info-box blue-box">
+            <h4>Clinical Decision Support</h4>
+            <p>Utilize decision support to enable you to deliver quality care to your patients, at every stage of healthcare delivery.</p>
+            <button>Explore</button>
+          </div>
+          <div className="info-box green-box">
+            <h4>Intelligent Diagnostics</h4>
+            <p>Make decisions based on scientific evidence.</p>
+            <button>Discover</button>
+          </div>
+         </div>
+         </div>
+         {/* Gradient */}
+     <div className="hero-wave">
+   <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="heroGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#0EA5E9" />
+              <stop offset="100%" stopColor="#22C55E" />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#heroGradient)"
+            d="M0,224L60,197.3C120,171,240,117,360,112C480,107,600,149,720,165.3C840,181,960,171,1080,144C1200,117,1320,75,1380,53.3L1440,32V320H0Z"
+          />
+        </svg>
+         </div>
+
+
+     
     </section>
   );
 }
-
 export default Hero;
