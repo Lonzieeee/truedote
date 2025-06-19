@@ -71,3 +71,18 @@
     width: 100%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .services-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20rem;
+    gap: 2.5rem;
+  }
+  .services-section h2{
+   margin-top: 40px;
+  }
+  .dot {
+    margin-top: 20px;
+  }
+ 
+}
+
