@@ -46,7 +46,7 @@ function About() {
 
   return (
     <section className="about-section">
-    {/* Vitals Bar */}
+    {/* ABout header */}
      <div className="ecg-header">
   <div className="ecg-line"></div>
   <h2 className="about-title">About Us</h2>
@@ -71,13 +71,15 @@ function About() {
 
       </div>
 
-      {/* Floating React Icons */}
+      {/* Floating  Icons */}
       <div className="floating-icons">
         <FaStethoscope className="float-icon icon1" />
         <FaCapsules className="float-icon icon2" />
         <FaDna className="float-icon icon3" />
         <FaSyringe className="float-icon icon4" />
         <FaMicroscope className="float-icon icon5" />
+        <FaHeartbeat className="float-icon icon6" />
+<FaFlask className="float-icon icon7" />
       </div>
     </section>
   );

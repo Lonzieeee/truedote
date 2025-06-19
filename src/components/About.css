@@ -153,23 +153,37 @@ top: 10%;
   
 }
 .float-icon.icon3 {
-  top: 50%;
-  left: 50%;
+  top: 41%;
+  left: 95%;
   animation-delay: 2s;
    
 }
 .float-icon.icon4 {
-  top: 60%;
+  top: 80%;
   left: 10%;
   animation-delay: 3s;
  
 }
 .float-icon.icon5 {
   bottom: 25%;
-  left: 20%;
+  left: 10%;
   animation-delay: 4s;
   
 }
+.float-icon.icon6 {
+  bottom: 10%;
+  right: 5%;
+  animation-delay: 5s;
+}
+
+.float-icon.icon7 {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 6s;
+}
+
+
 
 @keyframes pulseFloat {
   0% { transform: translateY(0) scale(0.95); opacity: 0.03; }
