@@ -1,25 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
+import {
+  FaUserMd,
+  FaFlask,
+  FaUsers,
+  FaHeartbeat,
+  FaStethoscope,
+  FaCapsules,
+  FaDna,
+  FaSyringe,
+  FaMicroscope
+} from "react-icons/fa";
 
 function About() {
-    return (
-        <section className="about-section">
-            <h2>ABOUT US</h2>
-            <div className="dot" />
-            <div className="about-content">
-                <div className="about-column">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+  const [activeTab, setActiveTab] = useState("mission");
 
-<p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi.</p>
-                </div>
-                <div className="vertical-divider" />
-                <div className="about-column">
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+  const renderContent = () => {
+    switch (activeTab) {
+      case "mission":
+        return {
+          title: "Mission",
+          text: "Our mission is to revolutionize healthcare diagnostics by equipping hospitals and clinics with cutting-edge, AI-powered diagnostic tools that enhance accuracy, speed, and accessibility."
+        };
+      case "vision":
+        return {
+          title: "Vision",
+          text: "We envision a future where every patient, regardless of location, receives timely and precise diagnostics through intelligent systems that empower healthcare providers globally."
+        };
+      case "team":
+        return {
+          title: "Team",
+          text: "Our interdisciplinary team includes doctors, engineers, AI researchers, and designers — all working together to build life-saving technology with real-world impact."
+        };
+      case "tech":
+        return {
+          title: "Technology",
+          text: "Our platform merges AI diagnostics, electronic medical records, and lab automation into one intuitive system, helping streamline hospital workflows and decision-making."
+        };
+      default:
+        return { title: "", text: "" };
+    }
+  };
 
-<p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi.</p>
-                </div>
-            </div>
-        </section>
-    );
+  const { title, text } = renderContent();
+
+  return (
+    <section className="about-section">
+    {/* Vitals Bar */}
+     <div className="ecg-header">
+  <div className="ecg-line"></div>
+  <h2 className="about-title">About Us</h2>
+  <div className="ecg-line"></div>
+</div>
+
+
+      {/* Dashboard Panel */}
+      <div className="dashboard">
+        <div className="sidebar">
+          <button onClick={() => setActiveTab("mission")} className={activeTab === "mission" ? "active" : ""}><FaUserMd /> Mission</button>
+          <button onClick={() => setActiveTab("vision")} className={activeTab === "vision" ? "active" : ""}><FaFlask /> Vision</button>
+          <button onClick={() => setActiveTab("team")} className={activeTab === "team" ? "active" : ""}><FaUsers /> Team</button>
+          <button onClick={() => setActiveTab("tech")} className={activeTab === "tech" ? "active" : ""}><FaFlask /> Technology</button>
+        </div>
+       <div className={`content-panel-wrapper ${activeTab}`}>
+  <div className="content-panel">
+    <h3 className="tab-heading">{title}</h3>
+    <p className="tab-content">{text}</p>
+  </div>
+</div>
+
+      </div>
+
+      {/* Floating React Icons */}
+      <div className="floating-icons">
+        <FaStethoscope className="float-icon icon1" />
+        <FaCapsules className="float-icon icon2" />
+        <FaDna className="float-icon icon3" />
+        <FaSyringe className="float-icon icon4" />
+        <FaMicroscope className="float-icon icon5" />
+      </div>
+    </section>
+  );
 }
+
 export default About;

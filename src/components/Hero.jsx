@@ -50,19 +50,14 @@ function Hero() {
          </div>
          {/* Gradient */}
      <div className="hero-wave">
-   <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="heroGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#0EA5E9" />
-              <stop offset="100%" stopColor="#22C55E" />
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#heroGradient)"
-            d="M0,224L60,197.3C120,171,240,117,360,112C480,107,600,149,720,165.3C840,181,960,171,1080,144C1200,117,1320,75,1380,53.3L1440,32V320H0Z"
-          />
-        </svg>
-         </div>
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path
+      fill="#ffffff"
+      d="M0,224L60,197.3C120,171,240,117,360,112C480,107,600,149,720,165.3C840,181,960,171,1080,144C1200,117,1320,75,1380,53.3L1440,32V320H0Z"
+    />
+  </svg>
+</div>
+
 
 
      
