@@ -9,9 +9,13 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="contact-section">
-        
-      <div className="contact-card contact-left slide-in-left">
+    <section className="contact-section heartbeat-in">
+        <div className="contact-header">
+            <h2>Contact Us</h2>
+            <p>We'd Love to hear from you</p>
+        </div>
+        <div className="contact-content">
+      <div className="contact-card contact-left">
         <h3>Send Message</h3>
         <form>
           <input type="text" placeholder="First Name" required />
@@ -22,7 +26,7 @@ export default function ContactSection() {
         </form>
       </div>
 
-      <div className="contact-card contact-right slide-in-right">
+      <div className="contact-card contact-right">
         <h3>Get in Touch</h3>
         <p className="company-name">Truedote Company Limited</p>
         <p>📍 Nairobi, Kenya</p>
@@ -35,6 +39,7 @@ export default function ContactSection() {
           <a href="#"><FaTwitter /></a>
           <a href="#"><FaLinkedinIn /></a>
         </div>
+      </div>
       </div>
     </section>
   );
