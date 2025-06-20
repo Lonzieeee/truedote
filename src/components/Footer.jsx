@@ -1,38 +1,41 @@
 import React from "react";
 import "./Footer.css";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaWhatsapp,
+  FaTwitter,
+  FaLinkedinIn
+} from "react-icons/fa";
 
-function Footer() {
-    return (
-        <footer className="footer">
-            <div className="footer-content">
-                {/* social media */}
-                <div className="social-icons">
-                     <FaFacebookF />
-          <FaTwitter />
-          <FaInstagram />
+export default function ContactSection() {
+  return (
+    <section className="contact-section">
+        
+      <div className="contact-card contact-left slide-in-left">
+        <h3>Send Message</h3>
+        <form>
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea rows="4" placeholder="Your Message..." required></textarea>
+          <button type="submit">SEND</button>
+        </form>
+      </div>
 
-                </div>
-                {/* form */}
-                <form className="contact-form">
-                    <div className="name-fields">
-                        <input type="text" placeholder="First Name *" required />
+      <div className="contact-card contact-right slide-in-right">
+        <h3>Get in Touch</h3>
+        <p className="company-name">Truedote Company Limited</p>
+        <p>📍 Nairobi, Kenya</p>
+        <p>📞 +254 712 345 678</p>
+        <p>📧 info@truedote.ai</p>
 
-                        <input type="text" placeholder="Last Name *" required />
-
-                    </div>
-                    <input type="email" placeholder="Email *" required />
-
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-
-            </div>
-            {/* copyright */}
-            <div className="copyright">
-                 © 2025 All Rights Reserved
-            </div>
-        </footer>
-    );
+        <div className="social-icons">
+          <a href="#"><FaFacebookF /></a>
+          <a href="#"><FaWhatsapp /></a>
+          <a href="#"><FaTwitter /></a>
+          <a href="#"><FaLinkedinIn /></a>
+        </div>
+      </div>
+    </section>
+  );
 }
-export default Footer;
