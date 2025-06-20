@@ -25,6 +25,7 @@
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+
 }
 
 .hero-content p {
@@ -69,6 +70,11 @@
 
 .info-box h4 {
   margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.2rem;;
+}
+.info-box p {
+  text-align: left;
 }
 
 .info-box button {

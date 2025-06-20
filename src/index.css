@@ -10,3 +10,10 @@ html, body {
   background: transparent;
   overflow-x: hidden;
 }
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .about-title, .services-title {
+  font-family: 'Space Grotesk', sans-serif;
+}
