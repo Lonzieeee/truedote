@@ -8,7 +8,7 @@ import {
   FaStethoscope,
   FaCapsules,
   FaDna,
-  FaSyringe,
+  // FaSyringe,
   FaMicroscope
 } from "react-icons/fa";
 
@@ -76,7 +76,7 @@ function About() {
         <FaStethoscope className="float-icon icon1" />
         <FaCapsules className="float-icon icon2" />
         <FaDna className="float-icon icon3" />
-        <FaSyringe className="float-icon icon4" />
+        {/* <FaSyringe className="float-icon icon4" /> */}
         <FaMicroscope className="float-icon icon5" />
         <FaHeartbeat className="float-icon icon6" />
 <FaFlask className="float-icon icon7" />

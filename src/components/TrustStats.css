@@ -1,0 +1,82 @@
+.orbit-section {
+
+background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 50%, #22c55e 100%);
+ padding: 100px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+.orbit-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  background: linear-gradient(to right, #0ea5e9, #22c55e, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.orbit-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  animation: rotate 20s linear infinite;
+}
+
+.orbit-core {
+  width: 80px;
+  height: 80px;
+  background: #0ea5e9;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px #0ea5e9, 0 0 60px rgba(14, 165, 233, 0.3);
+}
+
+
+.orbit-item {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.orbit-item:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px currentColor;
+}
+
+.orbit-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-shadow: 0 0 10px currentColor;
+}
+
+.orbit-label {
+  font-size: 12px;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.item-0 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+.item-1 { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+.item-2 { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+.item-3 { top: 50%; left: 0%; transform: translate(-50%, -50%); }
+
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
