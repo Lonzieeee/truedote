@@ -11,7 +11,7 @@ const stats = [
 export default function OrbitalStats() {
   return (
     <section className="orbit-section">
-      <h2 className="orbit-title">System Trust Scores</h2>
+      <h2 className="orbit-title">Our System's Trust Scores</h2>
       <div className="orbit-wrapper">
         <div className="orbit-core"></div>
         {stats.map((stat, index) => (
