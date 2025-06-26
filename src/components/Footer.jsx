@@ -62,7 +62,7 @@ export default function ContactSection() {
           <p className="company-name">Truedote Company Limited</p>
           <p>📍 Nairobi, Kenya</p>
           <p>📞 +254 712 345 678</p>
-          <p>📧 info@truedote.com</p>
+          <p>📧 hello@truedote.com</p>
 
           <div className="social-icons">
             <a href="#"><FaFacebookF /></a>

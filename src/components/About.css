@@ -31,7 +31,7 @@
   height: 40px;
   background: url("data:image/svg+xml,%3Csvg width='1000' height='40' viewBox='0 0 1000 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 H200 L210 10 L220 30 L230 10 L240 20 H1000' stroke='%230ea5e9' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-x;
   background-size: 1000px 40px;
-  animation: moveECG 2s linear infinite;
+  animation: moveECG 15s linear infinite;
   opacity: 0.8;
 }
 
@@ -137,7 +137,7 @@
   opacity: 0.05;
   font-size: 4rem;
   z-index: 0;
-  animation: pulseFloat 8s ease-in-out infinite;
+  animation: pulseFloat 2s ease-in-out infinite;
 }
 
 .float-icon.icon1 {
@@ -191,7 +191,6 @@ top: 10%;
   100% { transform: translateY(0) scale(0.95); opacity: 0.03; }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .dashboard {
     flex-direction: column;
