@@ -25,6 +25,47 @@
   text-align: center;
 }
 
+
+.floating-icons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+ 
+}
+
+.left-icons {
+  left: 0;
+  margin-left: 1rem;
+  align-items: flex-start;
+}
+
+.right-icons {
+   right: 2.5rem;
+
+  align-items: flex-end;
+}
+
+.floating-icon {
+  color: white;
+  font-size: 40px;
+  opacity: 0.5;
+  animation: floatDown 12s linear infinite;
+}
+
+
+
+
+
+
+
+
 .hero-title {
   font-size: 3rem;
 }
@@ -109,31 +150,6 @@ transition: background 0.3s ease, transform 0.2s;
   border: 1px solid #22C55E;
 }
 
-/* Floating icons */
-.floating-icons .float-icon {
-  position: absolute;
-  font-size: 20px;
-  opacity: 0.3;
-  color: white;
-  animation: float 6s ease-in-out infinite;
-}
-
-.icon1 { top: 10%; left: 5%; animation-delay: 0s; }
-.icon2 { top: 20%; right: 10%; animation-delay: 1s; }
-.icon3 { bottom: 10%; left: 15%; animation-delay: 2s; }
-.icon4 { top: 30%; left: 60%; animation-delay: 3s; }
-.icon5 { top: 40%; right: 20%; animation-delay: 4s; }
-.icon6 { bottom: 5%; right: 10%; animation-delay: 5s; }
-.icon7 { top: 15%; left: 40%; animation-delay: 2.5s; }
-.icon8 { bottom: 20%; left: 60%; animation-delay: 1.5s; }
-.icon9 { top: 25%; right: 30%; animation-delay: 3.5s; }
-.icon10 { bottom: 30%; right: 5%; animation-delay: 2.2s; }
-
-@keyframes float {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
 
 .hero-wave {
   position: absolute;
@@ -220,6 +236,11 @@ transition: background 0.3s ease, transform 0.2s;
     width: 85%;
     text-align: center;
   }
+ 
+  .floating-icons {
+    display: none;
+  
+}
 }
 
 @media (max-width: 480px) {
@@ -236,8 +257,7 @@ transition: background 0.3s ease, transform 0.2s;
   .hero-wave svg {
     height: 50px;
   }
-
-  .icon1, .icon2, .icon5, .icon10 {
-    display: none;
-  }
+ 
+ 
 }
+

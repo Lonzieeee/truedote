@@ -1,4 +1,4 @@
-// Hero.jsx
+
 import React from "react";
 import "./Hero.css";
 import { Typewriter } from "react-simple-typewriter";
@@ -6,16 +6,12 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import {
-  FaHeartbeat,
-  FaMicroscope,
-  FaCapsules,
-  FaDna,
   FaStethoscope,
-  FaSyringe,
-  FaVials,
-  FaHospital,
-  FaBrain,
-  FaNotesMedical,
+ FaBrain,
+ FaMicroscope,
+ FaHeartbeat,
+ FaCapsules,
+ FaHospital,
 } from "react-icons/fa";
 
 function Hero() {
@@ -29,31 +25,21 @@ useEffect(() => {
 
   return (
     <section className="hero-section">
-      {/* Floating Icons */}
-      <div className="floating-icons">
-        <FaHeartbeat className="float-icon icon1" />
-        <FaMicroscope className="float-icon icon2" />
-        <FaCapsules className="float-icon icon3" />
-        <FaDna className="float-icon icon4" />
-        <FaStethoscope className="float-icon icon5" />
-        <FaSyringe className="float-icon icon6" />
-        <FaVials className="float-icon icon7" />
-        <FaHospital className="float-icon icon8" />
-        <FaBrain className="float-icon icon9" />
-        <FaNotesMedical className="float-icon icon10" />
-      </div>
-
+      
       {/* Hero Content */}
       <div className="hero-content">
         <h1 className="hero-title">
           <Typewriter
-            words={["Improve the quality of care in your facility today!"]}
-            loop={1}
+            words={["Improve the quality of care in your facility today!",
+              "Leverage AI for accurate diagnostics.",
+              "Empower your healthcare team with intelligent tools."
+            ]}
+            loop={0}
             cursor
             cursorStyle="|"
-            typeSpeed={50}
-            deleteSpeed={0}
-            delaySpeed={1000}
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={3000}
           />
         </h1>
 
@@ -88,6 +74,21 @@ useEffect(() => {
           />
         </svg>
       </div>
+      {/* Corner Iconsv-vLEFT sIDE */}
+<div className="floating-icons left-icons">
+  <FaStethoscope className="floating-icon delay-1" />
+  <FaMicroscope className="floating-icon delay-2" />
+  <FaCapsules className="floating-icon delay-3" />
+</div>
+
+      {/* rigth */}
+
+      <div className="floating-icons right-icons">
+  <FaBrain className="floating-icon delay-1" />
+  <FaHeartbeat className="floating-icon delay-2" />
+  <FaHospital className="floating-icon delay-3" />
+</div>
+
     </section>
   );
 }
