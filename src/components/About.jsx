@@ -45,7 +45,8 @@ function About() {
   const { title, text } = renderContent();
 
   return (
-    <section className="about-section">
+   <section className="about-section" id="about">
+
     {/* ABout header */}
      <div className="ecg-header">
   <div className="ecg-line"></div>

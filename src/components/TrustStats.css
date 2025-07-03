@@ -12,6 +12,12 @@
   color: #0f172a;
 }
 
+.orbit-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
 
 .orbit-wrapper {
   position: relative;
@@ -20,19 +26,17 @@
   margin: 0 auto;
   animation: rotate 20s linear infinite;
 }
-
-.orbit-core {
+.orbit-core-image {
   width: 80px;
   height: 80px;
-  background: #0EA5E9;
-  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: pulse 3s ease-in-out infinite;
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+  z-index: 2;
 }
+
 .orbit-item {
   position: absolute;
   width: 120px;
