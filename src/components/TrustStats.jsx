@@ -15,7 +15,7 @@ export default function OrbitalStats() {
       <h2 className="orbit-title">Our System's Trust Scores</h2>
       <div className="orbit-container">
                <img
-  src="/src/assets/ai-brain.png"
+  src="/src/assets/ai-brain.png"  /*brain*/
   alt="AI Brain"
   className="orbit-core-image"
 />
