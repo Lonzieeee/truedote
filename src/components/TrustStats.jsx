@@ -1,5 +1,7 @@
 import React from "react";
 import "./TrustStats.css";
+import brainImg from '../assets/ai-brain.png'; 
+
 
 
 const stats = [
@@ -14,8 +16,8 @@ export default function OrbitalStats() {
     <section className="orbit-section">
       <h2 className="orbit-title">Our System's Trust Scores</h2>
       <div className="orbit-container">
- <img
-  src="/assets/ai-brain.png"
+<img
+  src={brainImg}
   alt="AI Brain"
   className="orbit-core-image"
 />
