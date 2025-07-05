@@ -3,7 +3,7 @@ import "./Hero.css";
 import { Typewriter } from "react-simple-typewriter";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import MedicalHeroImage from "../assets/hero-image.jpg";
+import MedicalHeroImage from "../assets/hero-image.webp";
 
 function Hero() {
   useEffect(() => {
