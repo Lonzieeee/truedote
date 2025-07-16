@@ -6,12 +6,13 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  height: fit-content!important ;
   background: transparent;
   overflow-x: hidden;
 }
 body {
   font-family: 'Inter', sans-serif;
+   height: fit-content!important ;
 }
 
 h1, h2, h3, .about-title, .services-title {
